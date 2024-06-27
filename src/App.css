@@ -1,38 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.timeframe-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.timeframe-selector button {
+  cursor: pointer;
+  margin: 8px;
+  border: none;
+  border-radius: 6px;
+  height: 34px;
+  width: max-content;
+  padding: 8px;
+  color: white;
+  background: rgb(34,193,195);
+  background: -moz-linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,0.5971638655462185) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,0.5971638655462185) 100%);
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,0.5971638655462185) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#22c1c3",endColorstr="#fdbb2d",GradientType=1);
 }
