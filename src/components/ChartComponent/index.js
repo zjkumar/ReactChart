@@ -4,6 +4,7 @@ import 'chartjs-adapter-date-fns'; // Import the date adapter
 import { format } from 'date-fns';
 import axios from 'axios';
 
+
 const ChartComponent = ({ timeframe }) => {
   const chartRef = useRef();
   const [chart, setChart] = useState(null);
@@ -20,6 +21,22 @@ const ChartComponent = ({ timeframe }) => {
     };
     fetchData();
   }, []);
+
+  const exportAsImage = () => {
+    // Use html2canvas to capture the chart canvas element
+    html2canvas(chartRef.current).then((canvas) => {
+      // Convert canvas to PNG image data
+      const imageData = canvas.toDataURL('image/png');
+
+      // Create a download link and click it programmatically
+      const link = document.createElement('a');
+      link.href = imageData;
+      link.download = 'chart.png';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  };
 
   const aggregateData = (data, timeframe) => {
     if (timeframe === 'weekly') {
