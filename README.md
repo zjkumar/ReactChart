@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# Charting Library Example
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a React.js application that integrates Chart.js to visualize data from a JSON file. It allows users to view data across different timeframes (daily, weekly, monthly) with zooming and interactive click events on data points.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Chart Display**: Visualizes data using Chart.js with support for various timeframes.
+- **Timeframe Selection**: Allows users to switch between daily, weekly, and monthly data views.
+- **Zooming**: Enables users to zoom in/out on specific time periods for detailed analysis.
+- **Interactive Click Events**: Displays detailed information or actions on clicking data points.
+- **Responsive UI**: Ensures a seamless experience across devices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend**: React.js
+- **Charting Library**: Chart.js
+- **Data Handling**: Axios for fetching JSON data
+- **Styling**: CSS for basic styling
 
-### `npm test`
+## Setup and Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run this project locally, follow these steps:
 
-### `npm run build`
+1. **Clone the Repository**:
+    ```bash
+    git clone https://github.com/zjkumar/ReactChart
+    cd charting-library
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Install Dependencies**:
+    Ensure you have Node.js and npm installed, then run:
+    ```bash
+    npm install
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Start the Development Server**:
+    Start the development server using:
+    ```bash
+    npm start
+    ```
+    The app will be available at `http://localhost:3000`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Build for Production**:
+    To build the project for production, use:
+    ```bash
+    npm run build
+    ```
+    This will create a `build` directory with the optimized production build.
 
-### `npm run eject`
+## Deployment
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This project is deployed on Vercel. You can access it [here](https://react-chart-pearl.vercel.app).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **src/components/ChartComponent.js**: Component to render the Chart using Chart.js.
+- **src/components/TimeframeSelector.js**: Component for selecting different timeframe breakdowns.
+- **src/data/data.json**: JSON file containing sample data for the chart.
+- **src/styles/App.css**: CSS file for basic styling of the application.
+- **src/App.js**: Main component integrating ChartComponent and TimeframeSelector.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Libraries and Tools
 
-## Learn More
+- **React.js**: JavaScript library for building user interfaces.
+- **Chart.js**: Simple yet flexible JavaScript charting library.
+- **Axios**: Promise-based HTTP client for making API requests.
+- **CSS**: Used for basic styling and layout.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Viewing the Chart**:
+    Upon starting the application, a default chart will be displayed based on the JSON data.
 
-### Code Splitting
+2. **Changing Timeframes**:
+    Use the buttons in the TimeframeSelector component to switch between daily, weekly, and monthly views.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. **Interacting with the Chart**:
+    - **Zooming**: Use the mouse wheel to zoom in/out on the chart for more detailed data.
+    - **Click Events**: Click on data points to interactively display additional information.
 
-### Analyzing the Bundle Size
+## Future Enhancements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Data Filtering**: Implement additional features such as data filtering based on criteria.
+- **Custom Tooltips**: Enhance tooltips to provide more context-specific information.
+- **Animations**: Add animations for smoother transitions and interactions.
+- **Accessibility**: Improve accessibility features to ensure usability for all users.
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is open-source and available under the [MIT License](LICENSE).
